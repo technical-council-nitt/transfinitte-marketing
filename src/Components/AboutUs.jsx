@@ -94,7 +94,7 @@ const AboutUs = () => {
           }}
           pagination={{ clickable: true }}
           modules={[EffectCoverflow, Pagination]}
-          className="mySwiper my-8 border"
+          className="mySwiper my-8"
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
