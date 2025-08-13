@@ -2,7 +2,7 @@ import { SiBoeing, SiBosch, SiGeeksforgeeks, SiJbl, SiMongodb, SiYamahacorporati
 import FadeInSection from "../Animations/FadeInSection";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -86,14 +86,19 @@ const AboutUs = () => {
           centeredSlides={true}
           slidesPerView={1}
           coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
+            rotate: 50,
+            stretch: 2,
             depth: 100,
-            modifier: 2,
+            modifier: 1,
             slideShadows: false,
           }}
           pagination={{ clickable: true }}
-          modules={[EffectCoverflow, Pagination]}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
           className="mySwiper my-8"
           breakpoints={{
             768: { slidesPerView: 2 },
