@@ -2,10 +2,10 @@ import { SiBoeing, SiBosch, SiGeeksforgeeks, SiJbl, SiMongodb, SiYamahacorporati
 import FadeInSection from "../Animations/FadeInSection";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 const steps = [
   { title: "01 Software", active: false },
@@ -79,45 +79,38 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Old Carousel
-      <div className="relative w-full max-w-3xl h-[400px] mx-auto my-16 overflow-hidden">
-        {slides.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`Slideshow ${i}`}
-            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === i ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
-          />
-        ))}
-      </div> */}
-
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'3'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 0,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        {slides.map((src, i) => (
-          <SwiperSlide>
-            <img
-              key={i}
-              src={src}
-              alt={`Slideshow ${i}`}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <FadeInSection>
+        <Swiper
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={1}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: false,
+          }}
+          pagination={{ clickable: true }}
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper my-8 border"
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {slides.map((src, i) => (
+            <SwiperSlide key={i}>
+              <img
+                src={src}
+                alt={`Slideshow ${i}`}
+                className="object-cover"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </FadeInSection>
 
       <div className="mt-20">
         <FadeInSection>
