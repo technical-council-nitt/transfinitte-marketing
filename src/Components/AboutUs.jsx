@@ -1,6 +1,11 @@
 import { SiBoeing, SiBosch, SiGeeksforgeeks, SiJbl, SiMongodb, SiYamahacorporation } from "react-icons/si";
 import FadeInSection from "../Animations/FadeInSection";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 const steps = [
   { title: "01 Software", active: false },
@@ -74,6 +79,7 @@ const AboutUs = () => {
         </div>
       </div>
 
+      {/* Old Carousel
       <div className="relative w-full max-w-3xl h-[400px] mx-auto my-16 overflow-hidden">
         {slides.map((src, i) => (
           <img
@@ -84,9 +90,34 @@ const AboutUs = () => {
               }`}
           />
         ))}
-      </div>
+      </div> */}
 
-
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'3'}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 0,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        {slides.map((src, i) => (
+          <SwiperSlide>
+            <img
+              key={i}
+              src={src}
+              alt={`Slideshow ${i}`}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       <div className="mt-20">
         <FadeInSection>

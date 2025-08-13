@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
+const logos = ['/T_black.png', '/T_white.png'];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -35,16 +37,24 @@ const Navbar = () => {
       {/* Logo */}
       <div
         onClick={() => scrollToSection("hero")}
-        className={`text-4xl font-bold transition ${scrolled ? "text-white" : "text-black"
-          }`}
+        className='text-4xl font-bold transition'
         style={{ cursor: "pointer" }}
       >
-        TransfiNITTe
+        <div className="relative w-[35px] h-[20px] sm:w-[50px] sm:h-[30px]">
+          {logos.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`Logo ${i}`}
+              className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Desktop Nav */}
       <div
-        className={`hidden md:flex md:gap-6 lg:gap-16 md:text-md lg:text-lg font-bold items-center transition ${scrolled ? "text-white" : "text-black"
+        className={`hidden sm:flex gap-5 md:gap-6 lg:gap-16 md:text-md lg:text-lg font-bold items-center transition ${scrolled ? "text-white" : "text-black"
           }`}
       >
         {navItems.map((item) => (
@@ -61,14 +71,14 @@ const Navbar = () => {
 
       {/* Desktop Button */}
       <button
-        className={`hidden md:flex px-5 py-2 rounded transition cursor-pointer ${scrolled ? "bg-white text-black" : "bg-black text-white"
+        className={`hidden sm:flex px-5 py-2 rounded transition cursor-pointer ${scrolled ? "bg-white text-black" : "bg-black text-white"
           } hover:bg-neutral-600 hover:text-white`}
       >
         Problem Statements →
       </button>
 
       {/* Mobile Menu Icon */}
-      <div className={`md:hidden ${scrolled ? "text-white" : "text-black"}`}>
+      <div className={`flex sm:hidden ${scrolled ? "text-white" : "text-black"}`}>
         <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
