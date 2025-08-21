@@ -31,7 +31,7 @@ const Footer = () => {
                 </div>
             </FadeInSection>
 
-            <FadeInSection>
+           
                 <div className="text-white text-md sm:text-xl mx-8 px-0 mt-4 sm:px-6 flex flex-col md:block items-center md:items-start w-full absolute left-0 bottom-0" style={{minHeight: '7rem'}}>
                     {/* Social Links */}
                     <div className="flex gap-x-10 text-5xl text-white items-center md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2" style={{marginLeft: 0}}>
@@ -71,7 +71,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </FadeInSection>
+           
         </section>
     );
 };
