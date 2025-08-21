@@ -7,16 +7,12 @@ const Footer = () => {
     return (
         <section
                     id='footer'
-                    className="w-full min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-16 py-20"
+                    className="bg-black px-6 md:px-16 py-20 text-gray-400 text-left"
                     style={{
                         backgroundImage: `url(${footerBg})`,
-                        backgroundSize: "100% auto",
+                        backgroundSize: "cover",
                         backgroundPosition: "center bottom",
                         backgroundRepeat: "no-repeat",
-                        
-                        
-                      
-                       
                     }}
                 >
             <FadeInSection>
