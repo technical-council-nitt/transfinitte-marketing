@@ -21,7 +21,7 @@ const App = () => {
       {/* <MeetTeam /> */}
       {/* <SecretIngredient /> */}
       <Reviews id="testimonials" /> {/* Section-4 */}
-      <Footer/> 
+      <Footer/>
     </div>
   );
 };

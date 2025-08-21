@@ -1,30 +1,44 @@
 import FadeInSection from "../Animations/FadeInSection";
 import { IoIosCall, IoMdMail } from "react-icons/io";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import footerBg from "/Images/footer-bg.png";
 
 const Footer = () => {
     return (
-        <section className="bg-red-600 px-6 md:px-16 py-10 text-gray-400 text-left">
+        <section
+                    id='footer'
+                    className="w-full min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-16 py-20"
+                    style={{
+                        backgroundImage: `url(${footerBg})`,
+                        backgroundSize: "100% auto",
+                        backgroundPosition: "center bottom",
+                        backgroundRepeat: "no-repeat",
+                        
+                        
+                      
+                       
+                    }}
+                >
             <FadeInSection>
-                <div className="text-black text-center mb-12 p-4 font-semibold">
+                <div className="text-white text-center mb-12 p-4 font-semibold">
                     <h1
-                        className="inline-block leading-none w-full text-[clamp(2rem,10vw,6rem)]"
+                        className="inline-block leading-none w-full text-[clamp(2rem,14vw,20rem)]"
                         style={{ wordBreak: "break-word" }}
                     >
                         TransfiNITTe
                     </h1>
                 </div>
 
-                <div className="text-gray-900 text-center border-b-2 border-gray-900 pb-10 text-md sm:text-xl">
+                <div className="text-white text-right border-b-2 border-white pb-10 text-md sm:text-xl">
                     <div>Technical Council,</div>
-                    <div>NIT - Trichy</div>
+                    <div>NIT - Tiruchirapalli</div>
                 </div>
             </FadeInSection>
 
             <FadeInSection>
-                <div className="text-gray-900 text-md sm:text-xl mx-auto max-w-7xl mt-16 px-4 sm:px-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
+                <div className="text-white text-md sm:text-xl mx-auto max-w-7xl mt-16 px-4 sm:px-6 flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
                     {/* Social Links */}
-                    <div className="flex gap-x-10 text-4xl text-black items-center">
+                    <div className="flex gap-x-10 text-4xl text-white items-center">
                         <a
                             href="https://www.instagram.com/tc_nitt/"
                             target="_blank"
@@ -43,7 +57,7 @@ const Footer = () => {
                         </a>
                     </div>
 
-                    <div className="hidden md:block w-px h-28 bg-black" />
+                    <div className="hidden md:block w-px h-28 bg-white" />
 
                     <div className="flex flex-col items-center md:items-end text-center md:text-right gap-2">
                         <a
