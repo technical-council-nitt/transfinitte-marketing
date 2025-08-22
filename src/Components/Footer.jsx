@@ -31,10 +31,10 @@ const Footer = () => {
                 </div>
             </FadeInSection>
 
-
+            
                 <div className="text-white text-md sm:text-[2vw] mx-8 px-0 mt-4 sm:px-6 flex flex-col md:block items-center md:items-start w-full absolute left-0 bottom-0 mb-[3vw]">
                     {/* Social Links */}
-                    <div className="flex gap-x-10 text-3xl -translate-x-1/4 max-sm:text-[5vw] pt-0.5 text-white items-center md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 md:ml-5">
+                    <div className="flex gap-x-10 sm:text-[4.3vw] lg:text-[3.4vw] md:text-[4vw] pl-7 -translate-x-1/4 max-sm:text-[5vw] pt-0.5 text-white items-center md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 md:ml-5">
                         <a
                             href="https://www.instagram.com/tc_nitt/"
                             target="_blank"
@@ -53,9 +53,9 @@ const Footer = () => {
                         </a>
                     </div>
 
-                    <div className="hidden md:block w-px h-110 bg-white md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2" />
+                    <div className="hidden md:block w-[2px] h-[60vw] bg-white md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2" />
 
-                    <div className="flex flex-col items-center max-sm:text-[3vw] md:items-end text-center md:text-right gap-2 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 mr-12 text-xl">
+                    <div className="flex flex-col sm:text-[2vw] lg:text-[1.8vw] items-center max-sm:text-[3vw] md:items-end text-center md:text-right gap-2 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 mr-12 text-xl">
                         <a
                             className="underline flex items-center justify-center md:justify-end gap-2"
                             href="mailto:technicalcouncil.nitt.work@gmail.com"
