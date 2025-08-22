@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <section
                     id='footer'
-                    className="bg-black px-6 md:px-16 top-0 h-[100vh] max-h-[70vw] text-gray-400 text-left"
+                    className="bg-black px-6 md:px-16 top-0 h-[90vh] max-h-[70vw] text-gray-400 text-left"
                     style={{
                         backgroundImage: `url(${footerBg})`,
                         backgroundSize: "cover",
@@ -16,7 +16,7 @@ const Footer = () => {
                     }}
                 >
             <FadeInSection>
-                <div className="flex justify-center items-center mb-4 mt-0 pt-30 p-4">
+                <div className="flex justify-center items-center mt-0 pt-[2rem] max-sm:pt-[1rem] max-sm:mb-0">
                     <img
                         src="/TransfiNITTe.png"
                         alt="TransfiNITTe Logo"
@@ -25,16 +25,16 @@ const Footer = () => {
                     />
                 </div>
 
-                <div className="text-white text-right border-b-2 border-white pb-10 text-md sm:text-xl">
+                <div className="text-white text-[3vw] text-right border-b-2 border-white pb-2 text-md sm:text-xl max-sm:mt-[-0.5rem]">
                     <div>Technical Council,</div>
                     <div>NIT - Tiruchirapalli</div>
                 </div>
             </FadeInSection>
 
-           
-                <div className="text-white text-md sm:text-xl mx-8 px-0 mt-4 sm:px-6 flex flex-col md:block items-center md:items-start w-full absolute left-0 bottom-0" style={{minHeight: '7rem'}}>
+
+                <div className="text-white text-md sm:text-[2vw] mx-8 px-0 mt-4 sm:px-6 flex flex-col md:block items-center md:items-start w-full absolute left-0 bottom-0 mb-[3vw]">
                     {/* Social Links */}
-                    <div className="flex gap-x-10 text-5xl text-white items-center md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2" style={{marginLeft: 0}}>
+                    <div className="flex gap-x-10 text-3xl -translate-x-1/4 max-sm:text-[5vw] pt-0.5 text-white items-center md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 " style={{marginLeft: 0}}>
                         <a
                             href="https://www.instagram.com/tc_nitt/"
                             target="_blank"
@@ -55,7 +55,7 @@ const Footer = () => {
 
                     <div className="hidden md:block w-px h-68 bg-white md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2" />
 
-                    <div className="flex flex-col items-center md:items-end text-center md:text-right gap-2 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 mr-12 text-xl">
+                    <div className="flex flex-col items-center max-sm:text-[3vw] md:items-end text-center md:text-right gap-2 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 mr-12 text-xl">
                         <a
                             className="underline flex items-center justify-center md:justify-end gap-2"
                             href="mailto:technicalcouncil.nitt.work@gmail.com"
@@ -66,7 +66,7 @@ const Footer = () => {
                             technicalcouncil.nitt.work@gmail.com
                         </a>
                         <div className="flex items-center justify-center md:justify-end gap-2">
-                            <IoIosCall />
+                            <IoIosCall / >
                             70477 79851 / 99407 42527
                         </div>
                     </div>
