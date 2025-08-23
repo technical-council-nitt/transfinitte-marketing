@@ -24,7 +24,7 @@ const Hero = () => {
                         <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0">
                             elevate.
                         </h1>
-                        <p className="mt-2 text-l sm:text-xl font-semibold text-white">
+                        <p className="mt-2 text-l sm:text-xl text-white" style={{ fontFamily: 'Neue Haas Grotesk Roman, Inter, system-ui, sans-serif' }}>
                             The Flagship Hackathon of NIT Trichy
                         </p>
                         <CountdownTimer
@@ -45,14 +45,16 @@ const Hero = () => {
             </div>
 
             {/* Sponsors Section */}
-            <div className="w-full flex flex-col items-center mt-8 mx-0 px-0">
-               
-                <img
-                    src="/Images/sponsers.png"
-                    alt="Sponsors"
-                    className="w-[100vw] h-auto"
-                />
-            </div>
+            <FadeInSection>
+                <div className="w-full flex flex-col items-center mt-8 mx-0 px-0">
+
+                    <img
+                        src="/Images/sponsers.png"
+                        alt="Sponsors"
+                        className="w-[100vw] h-auto"
+                    />
+                </div>
+            </FadeInSection>
         </section>
     );
 };
