@@ -86,7 +86,7 @@ const AboutUs = () => {
           centeredSlides={true}
           slidesPerView={1}
           coverflowEffect={{
-            rotate: 50,
+            rotate: 0,
             stretch: 2,
             depth: 100,
             modifier: 1,
@@ -110,7 +110,7 @@ const AboutUs = () => {
               <img
                 src={src}
                 alt={`Slideshow ${i}`}
-                className="object-cover"
+                className="object-cover rounded-xl"
               />
             </SwiperSlide>
           ))}

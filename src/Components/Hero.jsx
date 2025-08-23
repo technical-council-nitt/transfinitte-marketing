@@ -46,12 +46,13 @@ const Hero = () => {
 
             {/* Sponsors Section */}
             <FadeInSection>
-                <div className="w-full flex flex-col items-center mt-8 mx-0 px-0">
+                <div className="flex flex-col items-center mt-8 mx-0 px-0 sm:px-0 md:px-0 lg:px-0 py-20">
 
                     <img
                         src="/Images/sponsers.png"
                         alt="Sponsors"
-                        className="w-[100vw] h-auto"
+                        className="w-full h-[120px] object-cover"
+                        style={{ objectPosition: 'center' }}
                     />
                 </div>
             </FadeInSection>
