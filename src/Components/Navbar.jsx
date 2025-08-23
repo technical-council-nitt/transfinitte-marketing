@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
@@ -31,7 +32,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav
+    <div><nav
       className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300 bg-transparent mix-blend-difference"
       style={{ cursor: "default" }}
     >
@@ -86,8 +87,10 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="absolute top-full left-0 w-full mix-blend-normal text-white flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
+     
+    </nav>
+     {isOpen && (
+        <div className="fixed top-16 left-0 w-full z-[999] bg-white text-black flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
           {navItems.map((item) => (
             <button
               key={item.name}
@@ -95,15 +98,15 @@ const Navbar = () => {
               className="relative text-base font-semibold text-left w-full group cursor-pointer"
             >
               {item.name}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-stone-text-white transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
-          <button className="bg-stone-text-white text-white px-4 py-2 rounded hover:bg-neutral-600 transition cursor-pointer">
+          <button className="bg-black text-white px-4 py-2 rounded hover:bg-neutral-600 transition cursor-pointer">
             Website →
           </button>
         </div>
       )}
-    </nav>
+      </div>
   );
 };
 

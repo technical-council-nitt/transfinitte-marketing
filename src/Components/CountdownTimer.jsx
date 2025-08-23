@@ -20,7 +20,6 @@ const CountdownTimer = ({ targetDate, finalText, render }) => {
 
     updateDaysLeft();
 
-    // Calculate ms until next midnight
     const now = new Date();
     const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
     const msToMidnight = nextMidnight - now;
@@ -40,7 +39,7 @@ const CountdownTimer = ({ targetDate, finalText, render }) => {
     return render({ daysLeft, showFinalText, finalText });
   }
 
-  // Default layout: styled like the reference image
+ 
   return (
     <div className="mt-2 flex items-end gap-6">
       {showFinalText ? (
