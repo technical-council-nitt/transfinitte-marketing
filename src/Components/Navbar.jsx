@@ -41,13 +41,13 @@ const Navbar = () => {
         className='text-4xl font-bold transition'
         style={{ cursor: "pointer" }}
       >
-        <div className="relative w-[35px] h-[20px] sm:w-[50px] sm:h-[30px]">
+  <div className="relative w-[60px] h-[45px] sm:w-[120px] sm:h-[45px]">
           {logos.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Logo ${i}`}
-              className={`absolute top-0 left-0 w-[8vw] h-auto object-contain transition-opacity duration-500 ease-in-out mix-blend-difference ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+              className={`absolute top-0 left-0 w-[120rem] pt-[0.8rem] h-auto object-contain transition-opacity duration-500 ease-in-out mix-blend-difference ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
             />
           ))}
         </div>
