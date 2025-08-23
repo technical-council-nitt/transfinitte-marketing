@@ -87,7 +87,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white text-white flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
+        <div className="absolute top-full left-0 w-full mix-blend-normal text-white flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
           {navItems.map((item) => (
             <button
               key={item.name}
