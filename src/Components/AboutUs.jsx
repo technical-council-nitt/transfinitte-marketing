@@ -49,7 +49,7 @@ const AboutUs = () => {
       </FadeInSection>
 
       <FadeInSection>
-        <div className="my-12 max-w-4xl mx-auto text-xl md:text-3xl text-[rgb(161,163,165)] font-semibold text-center flex flex-wrap justify-center ">
+        <div className="my-12 max-w-4xl mx-auto text-[3vw] md:text-3xl max-sm:px-2 text-[rgb(161,163,165)] font-semibold text-center flex flex-wrap justify-center ">
           <span className="text-white font-bold whitespace-nowrap">4 Domains</span>
           <span className="">,</span>
           <span className="text-white font-bold whitespace-nowrap ml-3">42 Hours</span>

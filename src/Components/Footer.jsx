@@ -6,15 +6,18 @@ import footerBg from "/Images/footer-bg.png";
 const Footer = () => {
     return (
         <section
-                    id='footer'
-                    className="bg-black px-6 md:px-16 top-0 h-[90vh] max-h-[70vw] text-gray-400 text-left"
-                    style={{
-                        backgroundImage: `url(${footerBg})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center bottom",
-                        backgroundRepeat: "no-repeat",
-                    }}
-                >
+            id='footer'
+            className="bg-black px-6 md:px-16 top-0 h-[100vh] max-h-[70vw] text-gray-400 text-left"
+            style={{    
+                backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.05) 20%, rgba(0,0,0,0) 40%), url(${footerBg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center bottom",
+                backgroundRepeat: "no-repeat",
+            }}
+        >
+            <div className="pb-[4vw]">
+                <div className="h-full w-full bg-black opacity-50" />
+            </div>
             <FadeInSection>
                 <div className="flex justify-center items-center mt-0 pb-[3vw] pt-[2rem] max-sm:pt-[1rem] max-sm:mb-0">
                     <img
@@ -53,7 +56,7 @@ const Footer = () => {
                         </a>
                     </div>
 
-                    <div className="hidden md:block w-[2px] h-[60vw] bg-white md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2" />
+                    <div className="hidden md:block w-[2px] h-[30vw] bg-white md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2" />
 
                     <div className="flex flex-col sm:text-[2vw] lg:text-[1.8vw] items-center max-sm:text-[3vw] md:items-end text-center md:text-right gap-2 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 mr-12 text-xl">
                         <a
