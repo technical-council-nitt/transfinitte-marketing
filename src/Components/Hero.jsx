@@ -9,9 +9,9 @@ const Hero = () => {
     return (
         <section
             id='hero'
-            className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 md:px-10 lg:px-25 py-20"
+            className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 md:px-10 lg:px-25 py-14"
         >
-            <div className="relative flex flex-col-reverse sm:flex-row items-center justify-center w-full gap-4 md:gap-8 mt-3 mb-7">
+            <div className="relative flex flex-col-reverse sm:flex-row items-center justify-center w-full gap-4 md:gap-8 mt-3 mb-0">
                 {/* Left: Text */}
                 <FadeInSection>
                     <div className="flex-1 flex flex-col items-start justify-center text-left lg:mr-[16vw]">
@@ -46,7 +46,7 @@ const Hero = () => {
 
             {/* Sponsors Section */}
             <FadeInSection>
-                <div className="flex flex-col items-center mt-8 mx-0 px-0 sm:px-0 md:px-0 lg:px-0 py-20">
+                <div className="flex flex-col items-center mt-0 mx-0 px-0 sm:px-0 md:px-0 lg:px-0 py-20">
 
                     <img
                         src="/Images/sponsers.png"
