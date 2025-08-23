@@ -1,6 +1,7 @@
 
 import RotatingText from "./RotatingText";
 import CountdownTimer from "./CountdownTimer";
+import { SiBoeing, SiBosch, SiGeeksforgeeks, SiJbl, SiMongodb, SiYamahacorporation } from "react-icons/si";
 
 import heroBg from "/Images/hero-bg.png";
 import FadeInSection from "../Animations/FadeInSection";
@@ -45,17 +46,19 @@ const Hero = () => {
             </div>
 
             {/* Sponsors Section */}
-            <FadeInSection>
-                <div className="flex flex-col items-center mt-0 mx-0 px-0 sm:px-0 md:px-0 lg:px-0 py-20">
-
-                    <img
-                        src="/Images/sponsers.png"
-                        alt="Sponsors"
-                        className="w-full h-[120px] object-cover"
-                        style={{ objectPosition: 'center' }}
-                    />
-                </div>
-            </FadeInSection>
+           <div className="mt-20">
+        <FadeInSection>
+          <div className="font-semibold text-white text-xl md:text-2xl lg:text-4xl mb-4 text-center">Our Past Sponsors</div>
+                    <div className="flex flex-wrap justify-center items-center gap-13 px-4 text-white text-5xl sm:text-7xl">
+                        <SiJbl className="hover:scale-110 transition-transform duration-300" />
+                        <SiYamahacorporation className="hover:scale-110 transition-transform duration-300" />
+                        <SiBosch className="hover:scale-110 transition-transform duration-300" />
+                        <SiMongodb className="hover:scale-110 transition-transform duration-300" />
+                        <SiGeeksforgeeks className="hover:scale-110 transition-transform duration-300" />
+                        <SiBoeing className="hover:scale-110 transition-transform duration-300" />
+                    </div>
+        </FadeInSection>
+      </div>
         </section>
     );
 };

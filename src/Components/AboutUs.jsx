@@ -110,7 +110,7 @@ const AboutUs = () => {
               <img
                 src={src}
                 alt={`Slideshow ${i}`}
-                className="object-cover rounded-xl"
+                className="object-cover rounded-xl px-6"
               />
             </SwiperSlide>
           ))}
