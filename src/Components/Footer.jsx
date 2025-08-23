@@ -7,13 +7,8 @@ const Footer = () => {
     return (
         <section
             id='footer'
-            className="bg-black px-6 md:px-16 top-0 h-[100vh] max-h-[70vw] text-gray-400 text-left"
-            style={{    
-                backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.05) 20%, rgba(0,0,0,0) 40%), url(${footerBg})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center bottom",
-                backgroundRepeat: "no-repeat",
-            }}
+            className="px-6 md:px-16 top-0 h-[100vh] max-h-[70vw] text-gray-400 text-left"
+           
         >
             <div className="pb-[4vw]">
                 <div className="h-full w-full bg-black opacity-50" />

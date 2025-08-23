@@ -1,7 +1,7 @@
 import FadeInSection from "../Animations/FadeInSection";
 const Reviews = () => {
     return (
-        <section id="testimonials" className='bg-black px-6 md:px-16 py-20 text-gray-400 text-left font-semibold max-md:p-0 max-md:m-0 '>
+        <section id="testimonials" className='px-6 md:px-16 py-20 text-gray-400 text-left font-semibold max-md:p-0 max-md:m-0 '>
             <FadeInSection>
                 <div className="text-white text-3xl md:text-4xl lg:text-5xl mb-16 md:mb-24 ml-9 md:ml-10">
                     <span className="text-[rgb(161,163,165)]">We can't say better</span> than our participants.

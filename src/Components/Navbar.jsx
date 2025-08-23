@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
-const logos = ['/T_black.png', '/T_white.png'];
+const logos = ['/T_black.png', '/T_black.png'];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,8 @@ const Navbar = () => {
   const navItems = [
     { name: "About Us", target: "aboutus" },
     { name: "Reach", target: "reach" },
-    { name: "Testimonials", target: "testimonials" }
+    { name: "Testimonials", target: "testimonials" },
+    { name: "Contact Us", target: "footer" }
   ];
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300 backdrop-blur-xs"
+      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300 bg-transparent mix-blend-difference"
       style={{ cursor: "default" }}
     >
       {/* Logo */}
@@ -46,7 +47,7 @@ const Navbar = () => {
               key={i}
               src={src}
               alt={`Logo ${i}`}
-              className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+              className={`absolute top-0 left-0 w-[8vw] h-auto object-contain transition-opacity duration-500 ease-in-out mix-blend-difference ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
             />
           ))}
         </div>
@@ -54,7 +55,7 @@ const Navbar = () => {
 
       {/* Desktop Nav */}
       <div
-        className={`hidden sm:flex gap-5 md:gap-6 lg:gap-16 md:text-md lg:text-lg font-bold items-center transition ${scrolled ? "text-white" : "text-black"
+        className={`hidden sm:flex gap-5 md:gap-6 lg:gap-16 md:text-md lg:text-lg font-bold items-center transition ${scrolled ? "text-white" : "text-white"
           }`}
       >
         {navItems.map((item) => (
@@ -71,14 +72,14 @@ const Navbar = () => {
 
       {/* Desktop Button */}
       <button
-        className={`hidden sm:flex px-5 py-2 rounded transition cursor-pointer ${scrolled ? "bg-white text-black" : "bg-black text-white"
+        className={`hidden sm:flex px-8 py-2 rounded-[5px] transition cursor-pointer ${scrolled ? "bg-white text-black" : "bg-white text-black"
           } hover:bg-neutral-600 hover:text-white`}
       >
-        Problem Statements →
+        Website →
       </button>
 
       {/* Mobile Menu Icon */}
-      <div className={`flex sm:hidden ${scrolled ? "text-white" : "text-black"}`}>
+      <div className={`flex sm:hidden ${scrolled ? "text-white" : "text-white"}`}>
         <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
@@ -86,7 +87,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white text-black flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
+        <div className="absolute top-full left-0 w-full bg-white text-white flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
           {navItems.map((item) => (
             <button
               key={item.name}
@@ -94,11 +95,11 @@ const Navbar = () => {
               className="relative text-base font-semibold text-left w-full group cursor-pointer"
             >
               {item.name}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-stone-text-white transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
-          <button className="bg-black text-white px-4 py-2 rounded hover:bg-neutral-600 transition cursor-pointer">
-            Problem Statements →
+          <button className="bg-stone-text-white text-white px-4 py-2 rounded hover:bg-neutral-600 transition cursor-pointer">
+            Website →
           </button>
         </div>
       )}

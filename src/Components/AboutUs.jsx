@@ -41,7 +41,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section id="aboutus" className="bg-black text-white px-6 md:px-16 py-20">
+    <section id="aboutus" className="text-white px-6 md:px-16 py-20">
       <FadeInSection>
         <h2 className="text-4xl md:text-5xl lg:text-7xl mb-16 text-left text-[rgb(161,163,165)] font-semibold">
           About <span className="text-white font-bold">TransfiNITTe</span>

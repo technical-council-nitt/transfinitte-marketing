@@ -11,10 +11,11 @@ import Reach from './Components/Reach';
 
 const App = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden border-2">
+    <div className="relative min-h-screen overflow-hidden">
       <Navbar />
-      <Hero />
-      <AboutUs id="aboutus" /> {/* Section-2 */}
+      <div id='heroimg'><Hero />
+      <AboutUs id="aboutus" />
+      </div> {/* Section-2 */}
       <Reach id="reach"/> {/* Section-3  */}
       {/* <Services />  */}
       {/* <Appraoch /> */}
