@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div><nav
-      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300 bg-transparent mix-blend-difference"
+      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300 bg-transparent mix-blend-difference backdrop-blur-lg"
       style={{ cursor: "default" }}
     >
       {/* Logo */}
