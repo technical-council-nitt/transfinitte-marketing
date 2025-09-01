@@ -41,15 +41,15 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section id="aboutus" className="bg-black text-white px-6 md:px-16 py-20">
+    <section id="aboutus" className="text-white px-6 md:px-16 py-10 pb-0">
       <FadeInSection>
         <h2 className="text-4xl md:text-5xl lg:text-7xl mb-16 text-left text-[rgb(161,163,165)] font-semibold">
-          About <span className="text-white font-bold">TransfiNITTe</span>
+          About <span className="text-white" style={{ fontFamily: 'Neue Haas Grotesk light, Inter, system-ui, sans-serif' }}>TransfiNITTe</span>
         </h2>
       </FadeInSection>
 
       <FadeInSection>
-        <div className="my-12 max-w-4xl mx-auto text-xl md:text-3xl text-[rgb(161,163,165)] font-semibold text-center flex flex-wrap justify-center ">
+        <div className="my-12 max-w-4xl mx-auto text-[3vw] md:text-3xl max-sm:px-2 text-[rgb(161,163,165)] font-semibold text-center flex flex-wrap justify-center ">
           <span className="text-white font-bold whitespace-nowrap">4 Domains</span>
           <span className="">,</span>
           <span className="text-white font-bold whitespace-nowrap ml-3">42 Hours</span>
@@ -86,7 +86,7 @@ const AboutUs = () => {
           centeredSlides={true}
           slidesPerView={1}
           coverflowEffect={{
-            rotate: 50,
+            rotate: 0,
             stretch: 2,
             depth: 100,
             modifier: 1,
@@ -110,26 +110,14 @@ const AboutUs = () => {
               <img
                 src={src}
                 alt={`Slideshow ${i}`}
-                className="object-cover"
+                className="object-cover rounded-xl px-6"
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </FadeInSection>
 
-      <div className="mt-20">
-        <FadeInSection>
-          <div className="font-semibold text-white text-3xl md:text-4xl lg:text-5xl mb-12">They trust us</div>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 px-4 text-white justify-items-center items-center text-5xl sm:text-7xl">
-            <SiJbl className="hover:scale-110 transition-transform duration-300" />
-            <SiYamahacorporation className="hover:scale-110 transition-transform duration-300" />
-            <SiBosch className="hover:scale-110 transition-transform duration-300" />
-            <SiMongodb className="hover:scale-110 transition-transform duration-300" />
-            <SiGeeksforgeeks className="hover:scale-110 transition-transform duration-300" />
-            <SiBoeing className="hover:scale-110 transition-transform duration-300" />
-          </div>
-        </FadeInSection>
-      </div>
+      
 
     </section>
   );

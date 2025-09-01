@@ -1,7 +1,8 @@
+import { div } from "framer-motion/client";
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
-const logos = ['/T_black.png', '/T_white.png'];
+const logos = ['/T_black.png', '/T_black.png'];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,8 @@ const Navbar = () => {
   const navItems = [
     { name: "About Us", target: "aboutus" },
     { name: "Reach", target: "reach" },
-    { name: "Testimonials", target: "testimonials" }
+    { name: "Testimonials", target: "testimonials" },
+    { name: "Contact Us", target: "footer" }
   ];
 
   useEffect(() => {
@@ -30,8 +32,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300 backdrop-blur-xs"
+    <div><nav
+      className="w-full fixed top-0 z-50 px-6 md:px-10 py-4 flex justify-between items-center transition-colors duration-300 bg-transparent mix-blend-difference backdrop-blur-lg"
       style={{ cursor: "default" }}
     >
       {/* Logo */}
@@ -40,13 +42,13 @@ const Navbar = () => {
         className='text-4xl font-bold transition'
         style={{ cursor: "pointer" }}
       >
-        <div className="relative w-[35px] h-[20px] sm:w-[50px] sm:h-[30px]">
+  <div className="relative w-[60px] h-[45px] sm:w-[120px] sm:h-[45px]">
           {logos.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Logo ${i}`}
-              className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+              className={`absolute top-0 left-0 w-[120rem] pt-[0.8rem] h-auto object-contain transition-opacity duration-500 ease-in-out mix-blend-difference ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
             />
           ))}
         </div>
@@ -54,7 +56,7 @@ const Navbar = () => {
 
       {/* Desktop Nav */}
       <div
-        className={`hidden sm:flex gap-5 md:gap-6 lg:gap-16 md:text-md lg:text-lg font-bold items-center transition ${scrolled ? "text-white" : "text-black"
+        className={`hidden sm:flex gap-5 md:gap-6 lg:gap-16 md:text-md lg:text-lg font-bold items-center transition ${scrolled ? "text-white" : "text-white"
           }`}
       >
         {navItems.map((item) => (
@@ -71,22 +73,24 @@ const Navbar = () => {
 
       {/* Desktop Button */}
       <button
-        className={`hidden sm:flex px-5 py-2 rounded transition cursor-pointer ${scrolled ? "bg-white text-black" : "bg-black text-white"
+        className={`hidden sm:flex px-8 py-2 rounded-[5px] transition cursor-pointer ${scrolled ? "bg-white text-black" : "bg-white text-black"
           } hover:bg-neutral-600 hover:text-white`}
       >
-        Problem Statements →
+        Website →
       </button>
 
       {/* Mobile Menu Icon */}
-      <div className={`flex sm:hidden ${scrolled ? "text-white" : "text-black"}`}>
+      <div className={`flex sm:hidden ${scrolled ? "text-white" : "text-white"}`}>
         <button onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
       </div>
 
       {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white text-black flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
+     
+    </nav>
+     {isOpen && (
+        <div className="fixed top-16 left-0 w-full z-[999] bg-white text-black flex flex-col items-start px-6 py-4 gap-4 shadow-lg md:hidden transition-all duration-300">
           {navItems.map((item) => (
             <button
               key={item.name}
@@ -98,11 +102,11 @@ const Navbar = () => {
             </button>
           ))}
           <button className="bg-black text-white px-4 py-2 rounded hover:bg-neutral-600 transition cursor-pointer">
-            Problem Statements →
+            Website →
           </button>
         </div>
       )}
-    </nav>
+      </div>
   );
 };
 

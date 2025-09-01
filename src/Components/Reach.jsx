@@ -67,7 +67,7 @@ const Reach = () => {
                     </div>
                 </FadeInSection>
                 <FadeInSection>
-                    <div className="w-fit my-16 mx-auto">
+                    <div className="w-fit my-16 mx-auto mb-3">
                         <div className="border-4 w-fit">
                             <img src="/Images/TF_Goodies.png" className="" />
                         </div>

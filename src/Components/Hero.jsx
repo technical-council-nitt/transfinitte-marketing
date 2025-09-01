@@ -1,37 +1,64 @@
+
 import RotatingText from "./RotatingText";
 import CountdownTimer from "./CountdownTimer";
+import { SiBoeing, SiBosch, SiGeeksforgeeks, SiJbl, SiMongodb, SiYamahacorporation } from "react-icons/si";
+
 import heroBg from "/Images/hero-bg.png";
+import FadeInSection from "../Animations/FadeInSection";
 
 const Hero = () => {
     return (
         <section
             id='hero'
-            className="w-full min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-16 py-20"
-            style={{
-                backgroundImage: `url(${heroBg})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
+            className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 md:px-10 lg:px-25 py-14"
         >
-            <div className="max-w-6xl mt-20">
-                <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-black break-words">
-                    TransfiNITTe
-                </h1>
+            <div className="relative flex flex-col-reverse sm:flex-row items-center justify-center w-full gap-4 md:gap-8 mt-3 mb-0">
+                {/* Left: Text */}
+                <FadeInSection>
+                    <div className="flex-1 flex flex-col items-start justify-center text-left lg:mr-[16vw]">
+                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0">
+                            innovate.
+                        </h1>
+                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0">
+                            collaborate.
+                        </h1>
+                        <h1 className="text-[14vw] sm:text-7xl md:text-[7vw] lg:text-[5.7vw] font-bold text-white leading-none m-0">
+                            elevate.
+                        </h1>
+                        <p className="mt-2 text-l sm:text-xl text-white" style={{ fontFamily: 'Neue Haas Grotesk Roman, Inter, system-ui, sans-serif' }}>
+                            The Flagship Hackathon of NIT Trichy
+                        </p>
+                        <CountdownTimer
+                            targetDate={new Date("2025-10-10T00:00:00")}
+                            finalText="OCT 10-12 2025"
+                        />
+                    </div>
+                </FadeInSection>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-6 text-black font-bold text-4xl sm:text-6xl md:text-8xl text-center">
-                    <span>for</span>
-                    <div><RotatingText /></div>
+                <div className="items-center justify-center lg:transform translate-x-[-3vw]">
+                    <img
+                        src="/Images/teamcard.png"
+                        alt="Team Card"
+                        className="hidden sm:block w-[20rem] h-auto rounded-xl shadow-xl object-cover"
+                        style={{ background: "#181818" }}
+                    />
                 </div>
-
-                <p className="mt-10 text-lg sm:text-xl font-semibold text-black px-2 sm:px-0">
-                    The Flagship Hackathon of NIT Trichy
-                </p>
-
-                <CountdownTimer
-                    targetDate={new Date("2025-10-10T00:00:00")}
-                    finalText="OCT 10-12 2025"
-                />
             </div>
+
+            {/* Sponsors Section */}
+           <div className="mt-20">
+        <FadeInSection>
+          <div className="font-semibold text-white text-xl md:text-2xl lg:text-4xl mb-4 text-center">Our Past Sponsors</div>
+                    <div className="flex flex-wrap justify-center items-center gap-13 px-4 text-white text-5xl sm:text-7xl">
+                        <SiJbl className="hover:scale-110 transition-transform duration-300" />
+                        <SiYamahacorporation className="hover:scale-110 transition-transform duration-300" />
+                        <SiBosch className="hover:scale-110 transition-transform duration-300" />
+                        <SiMongodb className="hover:scale-110 transition-transform duration-300" />
+                        <SiGeeksforgeeks className="hover:scale-110 transition-transform duration-300" />
+                        <SiBoeing className="hover:scale-110 transition-transform duration-300" />
+                    </div>
+        </FadeInSection>
+      </div>
         </section>
     );
 };
