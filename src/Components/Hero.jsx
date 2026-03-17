@@ -10,7 +10,7 @@ const Hero = () => {
     return (
         <section
             id='hero'
-            className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 md:px-10 lg:px-25 py-14"
+            className="w-full min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 md:px-10 lg:px-25 py-14 pt-20"
         >
             <div className="relative flex flex-col-reverse sm:flex-row items-center justify-center w-full gap-4 md:gap-8 mt-3 mb-0">
                 {/* Left: Text */}
@@ -30,7 +30,7 @@ const Hero = () => {
                         </p>
                         <CountdownTimer
                             targetDate={new Date("2025-10-10T00:00:00")}
-                            finalText="OCT 10-12 2025"
+                            finalText="OCT 10-12 2026"
                         />
                     </div>
                 </FadeInSection>

@@ -27,7 +27,14 @@ const Navbar = () => {
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      const navHeight = document.querySelector('nav')?.offsetHeight || 80;
+      const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - navHeight,
+        behavior: "smooth"
+      });
+    }
     setIsOpen(false);
   };
 
@@ -39,16 +46,16 @@ const Navbar = () => {
       {/* Logo */}
       <div
         onClick={() => scrollToSection("hero")}
-        className='text-4xl font-bold transition'
+        className="flex items-center transition"
         style={{ cursor: "pointer" }}
       >
-  <div className="relative w-[60px] h-[45px] sm:w-[120px] sm:h-[45px]">
+        <div className="relative w-[80px] h-[45px] sm:w-[110px] sm:h-[52px]">
           {logos.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Logo ${i}`}
-              className={`absolute top-0 left-0 w-[120rem] pt-[0.8rem] h-auto object-contain transition-opacity duration-500 ease-in-out mix-blend-difference ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+              className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out ${scrolled === (i === 1) ? "opacity-100 z-10" : "opacity-0 z-0"}`}
             />
           ))}
         </div>
