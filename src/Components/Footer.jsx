@@ -65,7 +65,7 @@ const Footer = () => {
                         </a>
                         <div className="flex items-center justify-center md:justify-end gap-2">
                             <IoIosCall / >
-                            70477 79851 / 99407 42527
+                             91360 43027 / 99696 47124
                         </div>
                     </div>
                 </div>
